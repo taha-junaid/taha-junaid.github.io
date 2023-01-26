@@ -206,8 +206,6 @@ body {
     to {
         border-color: orange
     }
-
-
 }
 
 .mypic {
@@ -244,6 +242,10 @@ body {
     }
 }
 
+.aboutme{
+    margin: 2em 0 2em 0;
+}
+
 .aboutme-contents {
     display: flex;
     flex-direction: column;
@@ -267,6 +269,7 @@ body {
 }
 
 .projects {
+    margin-top: 2em;
 }
 
 .projects-contents {
@@ -435,6 +438,7 @@ body {
 
 .experience {
     font-family: 'Poppins', sans-serif;
+    margin-top: 2em;
 }
 
 .experience-contents {
