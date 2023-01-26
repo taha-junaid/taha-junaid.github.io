@@ -1,0 +1,491 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url("images/plain\ marble\ wallpaper.png");
+    /* background-size: cover;  */
+}
+
+.row {
+    margin: 0;
+}
+
+.landing {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    /* background-image: url("72ca2231815dd77e808e794d031e0ede.jpg"); */
+    background-size: cover;
+}
+
+.intro, .intro-text {
+    margin: auto;
+}
+
+.intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 1300px) {
+    .intro {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .left-nav {
+        display: none;
+        visibility: hidden;
+        z-index: -1;
+    }
+
+    .right-nav {
+        display: none;
+        visibility: hidden;
+        z-index: -1;
+    }
+}
+
+
+
+.left-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 5%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    box-shadow: 5px 0px 10px grey;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.right-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    box-shadow: -5px 0px 10px grey;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 999;
+}
+
+.right-nav-button {
+    color: #274E13;
+    padding: 15px 13px 15px 13px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.15em;
+    cursor: pointer;
+}
+
+.right-nav-button:hover {
+    font-size: 1.15em;
+    padding: 15px 13px 15px 13px;
+    box-shadow:
+        inset 4px 4px 4px grey,
+        inset -4px -4px 4px grey;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.active-nav-button {
+    font-size: 1.15em;
+    padding: 15px 13px 15px 13px;
+    box-shadow:
+        inset 4px 4px 4px goldenrod,
+        inset -4px -4px 4px goldenrod;
+    border-radius: 5px;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.fadeIn {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.c1 {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 5px grey;
+    display: inline-block;
+}
+
+.c1 h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.c2 {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 5px grey;
+    display: inline-block;
+}
+
+.intro-text h1 {
+    color: black;
+    text-shadow: 4px 4px 7px grey;
+    font-size: 4em;
+}
+
+.c1 .type {
+    font-size: 3em;
+    overflow: hidden;
+    border-right: .15em solid transparent;
+    white-space: nowrap;
+    width: 0;
+    animation:
+        typing 1s steps(20, end) forwards,
+        blink .8s 2;
+    animation-delay: 0s;
+}
+
+.c2 h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    overflow: hidden;
+    border-right: .15em solid transparent;
+    white-space: nowrap;
+    width: 0;
+    max-width: fit-content;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.c2 .type2 {
+    animation:
+        typing 1s steps(35, end) forwards,
+        blink .8s 2;
+    animation-delay: 1s;
+}
+
+.c2 .type3 {
+    animation:
+        typing 1s steps(35, end) forwards,
+        blink .8s 2;
+    animation-delay: 2s;
+}
+
+.c2 .type4 {
+    animation:
+        typing 1s steps(35, end) forwards,
+        blink .8s 2;
+    animation-delay: 3s;
+}
+
+.c2 .type5 {
+    animation:
+        typing 1s steps(35, end) forwards,
+        blink .8s infinite;
+    animation-delay: 4s;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+    from {
+        border-color: transparent
+    }
+
+    to {
+        border-color: orange;
+    }
+}
+
+@keyframes blink-dissappear {
+    from {
+        border-color: transparent;
+    }
+
+    to {
+        border-color: orange
+    }
+
+
+}
+
+.hc {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+  .mypic {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation-name: hoverfloat;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    filter: drop-shadow(0px 50px 20px grey);
+}
+
+@keyframes hoverfloat {
+    0% {
+        bottom: 0px;
+        filter: drop-shadow(0px 50px 20px grey);
+    }
+
+    50% {
+        bottom: 30px;
+        filter: drop-shadow(0px 90px 50px grey);
+    }
+
+    100% {
+        bottom: 0px;
+        filter: drop-shadow(0px 50px 20px grey);
+    }
+}
+
+.aboutme {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.aboutme-contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutme-contents h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #274E13;
+    font-size: 3em;
+    font-weight: 800;
+}
+
+.aboutme-contents p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: black;
+    backdrop-filter: blur(5px);
+}
+
+.projects{
+    min-height: 100vh;
+}
+
+.projects-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-contents h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #274E13;
+    font-size: 3em;
+    font-weight: 800;  
+}
+
+.collapsible {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 1.5em;
+    font-weight: 600;
+    background-color: transparent;
+    transition: box-shadow 0.5s ease-out;
+}
+
+.collapsible img {
+    width: 1em;
+    height: 1em;
+    display: inline;
+    outline: none;
+}
+
+/* Style the active section (if one is open) */
+.active, .collapsible:hover {
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 3px 10px grey;
+    outline: none;
+}
+
+.collapsible:active{
+        outline: none;
+}
+
+.collapsible:focus{
+        outline: none;
+}
+
+/* Style the content */
+.content {
+    backdrop-filter: blur(5px);
+    padding: 0 18px;
+    max-height: 0;
+    width: 100%;
+    transition: max-height 1s ease-out;
+    overflow: hidden;
+}
+
+.banner-container{
+    margin: 5px 0 5px 0;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    min-height: 120px;
+}
+
+.banner1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: banner-animation1 30s linear infinite;
+    justify-content: space-evenly;
+  }
+
+  
+  @keyframes banner-animation1 {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-100%); }
+  }
+
+  .banner2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: banner-animation2 30s linear infinite;
+    justify-content: space-evenly;
+  }
+
+  
+  @keyframes banner-animation2 {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0%); }
+  }
+
+
+  .skill-card {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .skill-card img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  
+  .skill-card .skill-name {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-weight: 900;
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .list-item-title{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-weight: 800;
+    font-size: 1.4em;
+  }
+
+  .list-item-title a{
+    font-size: 0.7em;
+    color: navy;
+  }
+
+  .list-item-content{
+    font-family: 'Poppins', sans-serif;
+    color: #363636;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+
+  .experience{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+  }
+
+ .experience-contents{
+    width: 100%;
+    padding: 33px;
+    backdrop-filter: blur(5px);
+ }
+
+  .experience-contents h1{
+        font-family: 'Poppins', sans-serif;
+        color: #274E13;
+        font-size: 3em;
+        font-weight: 800;  
+        text-align: center;
+  }
+
+
+  .exp-heading{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-weight: 800;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .exp-list{
+    font-family: 'Poppins', sans-serif;
+    color: #363636;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
