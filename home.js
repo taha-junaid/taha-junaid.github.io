@@ -54,15 +54,6 @@ function caliberateSectionOnScroll() {
 
 caliberateSectionOnScroll();
 
-function isElementBottomVisible(element) {
-    const rect = element.getBoundingClientRect();
-    // console.log(element.id+" "+rect.top +" " + rect.bottom + " "+(window.innerHeight || document.documentElement.clientHeight))
-    return (
-        rect.bottom >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-    );
-}
-
 window.addEventListener("wheel", function (event) {
     if (event.wheelDelta > 0 || event.detail < 0) {
         if (currElement == sec2) {
@@ -131,5 +122,13 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
+function copyToClipBoard(elementClass) {
+    console.log(elementClass)
+    var copyText = document.getElementsByClassName(elementClass)[0];
+    console.log(copyText)
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); 
+    navigator.clipboard.writeText(copyText.value);
+  }
 
 
