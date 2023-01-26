@@ -9,6 +9,10 @@ body {
     margin: 0;
 }
 
+.top-nav{
+    display: none;
+}
+
 .landing {
     width: 100%;
     min-height: 100vh;
@@ -27,30 +31,6 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
-@media screen and (max-width: 1300px) {
-    .intro {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .left-nav {
-        display: none;
-        visibility: hidden;
-        z-index: -1;
-    }
-
-    .right-nav {
-        display: none;
-        visibility: hidden;
-        z-index: -1;
-    }
-}
-
 
 
 .left-nav {
@@ -156,6 +136,12 @@ body {
     animation-delay: 0s;
 }
 
+.c1 .type div {
+    display: inline;
+    font-weight: 900;
+    text-shadow: 3px 3px 3px goldenrod;
+}
+
 .c2 h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
@@ -240,7 +226,7 @@ body {
     opacity: 1;
 }
 
-  .mypic {
+.mypic {
     width: 100%;
     height: 100%;
     position: relative;
@@ -295,7 +281,7 @@ body {
     backdrop-filter: blur(5px);
 }
 
-.projects{
+.projects {
     min-height: 100vh;
 }
 
@@ -309,7 +295,7 @@ body {
     font-family: 'Poppins', sans-serif;
     color: #274E13;
     font-size: 3em;
-    font-weight: 800;  
+    font-weight: 800;
 }
 
 .collapsible {
@@ -341,12 +327,12 @@ body {
     outline: none;
 }
 
-.collapsible:active{
-        outline: none;
+.collapsible:active {
+    outline: none;
 }
 
-.collapsible:focus{
-        outline: none;
+.collapsible:focus {
+    outline: none;
 }
 
 /* Style the content */
@@ -359,7 +345,7 @@ body {
     overflow: hidden;
 }
 
-.banner-container{
+.banner-container {
     margin: 5px 0 5px 0;
     display: flex;
     flex-direction: row;
@@ -379,15 +365,20 @@ body {
     white-space: nowrap;
     animation: banner-animation1 30s linear infinite;
     justify-content: space-evenly;
-  }
+}
 
-  
-  @keyframes banner-animation1 {
-    from { transform: translateX(0%); }
-    to { transform: translateX(-100%); }
-  }
 
-  .banner2 {
+@keyframes banner-animation1 {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.banner2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -399,16 +390,21 @@ body {
     white-space: nowrap;
     animation: banner-animation2 30s linear infinite;
     justify-content: space-evenly;
-  }
-
-  
-  @keyframes banner-animation2 {
-    from { transform: translateX(100%); }
-    to { transform: translateX(0%); }
-  }
+}
 
 
-  .skill-card {
+@keyframes banner-animation2 {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+
+.skill-card {
     width: 100px;
     height: 100px;
     overflow: hidden;
@@ -416,64 +412,64 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  
-  .skill-card img {
+}
+
+.skill-card img {
     width: 60%;
     height: 60%;
     object-fit: contain;
     border-radius: 8px;
-  }
-  
-  .skill-card .skill-name {
+}
+
+.skill-card .skill-name {
     font-family: 'Poppins', sans-serif;
     color: black;
     font-weight: 900;
     margin-top: 10px;
     font-size: 15px;
     text-align: center;
-  }
+}
 
-  .list-item-title{
+.list-item-title {
     font-family: 'Poppins', sans-serif;
     color: black;
     font-weight: 800;
     font-size: 1.4em;
-  }
+}
 
-  .list-item-title a{
+.list-item-title a {
     font-size: 0.7em;
     color: navy;
-  }
+}
 
-  .list-item-content{
+.list-item-content {
     font-family: 'Poppins', sans-serif;
     color: #363636;
     font-size: 0.8em;
     font-weight: 600;
-  }
+}
 
-  .experience{
+.experience {
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
-  }
+}
 
- .experience-contents{
+.experience-contents {
     width: 100%;
     padding: 33px;
     backdrop-filter: blur(5px);
- }
+}
 
-  .experience-contents h1{
-        font-family: 'Poppins', sans-serif;
-        color: #274E13;
-        font-size: 3em;
-        font-weight: 800;  
-        text-align: center;
-  }
+.experience-contents h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #274E13;
+    font-size: 3em;
+    font-weight: 800;
+    text-align: center;
+}
 
 
-  .exp-heading{
+.exp-heading {
     font-family: 'Poppins', sans-serif;
     color: black;
     font-weight: 800;
@@ -481,11 +477,142 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
 
-  .exp-list{
+.exp-list {
     font-family: 'Poppins', sans-serif;
     color: #363636;
     font-size: 1.2em;
     font-weight: 600;
-  }
+}
+
+@media screen and (max-width: 992px) {
+    .intro {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .intro-text h1 {
+        font-size: 1.7em;
+    }
+
+    .c1 .type {
+        font-size: 1.5em;
+    }
+
+    .c1 .type .div {
+        font-size: 1.6em;
+    }
+
+    .c2 h2 {
+        font-size: 1.2em;
+    }
+
+    .aboutme-contents h1 {
+        font-size: 2em;
+    }
+
+    .aboutme-contents p {
+        font-size: 1em;
+    }
+
+    .projects-contents h1 {
+        font-size: 2em;
+    }
+
+    .collapsible {
+        font-size: 1.2em;
+    }
+
+    .skill-name {
+        visibility: hidden;
+        display: none;
+    }
+
+    .skill-card {
+        width: 60px;
+        height: 60px;
+    }
+
+    .banner-container {
+        min-height: 70px;
+    }
+
+    .list-item-title {
+        font-size: 1em;
+    }
+    
+    .list-item-title a {
+        font-size: 0.5em;
+    }
+    
+    .list-item-content {
+        font-size: 0.8em;
+    }
+    
+    .experience-contents {
+        padding: 33px;
+    }
+    
+    .experience-contents h1 {
+        font-size: 2em;
+    }
+    
+    
+    .exp-heading {
+        font-size: 1em;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .company{
+        color: navy;
+    }
+
+    .period{
+        font-weight: 500;
+        font-style: italic;
+    }
+    
+    .exp-list {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .top-nav{
+        display: block;
+        height: fit-content;
+        padding: 15px;
+        backdrop-filter: blur(5px);
+        box-shadow: 0px 5px 10px grey;
+    }
+
+    .mypic{
+        width: 80%;
+        height: 80%;
+    }
+
+    .top-nav img{
+        height: 3em;
+        padding: 0;
+    }
+
+    .intro{
+        margin-top: auto;
+    }
+    
+    .left-nav {
+        display: none;
+        visibility: hidden;
+        z-index: -1;
+    }
+
+    .right-nav {
+        display: none;
+        visibility: hidden;
+        z-index: -1;
+    }
+}
