@@ -54,35 +54,35 @@ function caliberateSectionOnScroll() {
 
 caliberateSectionOnScroll();
 
-window.addEventListener("wheel", function (event) {
-    if (event.wheelDelta > 0 || event.detail < 0) {
-        if (currElement == sec2) {
-            window.scrollTo({
-                top: sec1.offsetTop,
-                behavior: "smooth"
-            });
-            currElement = sec1;
-            currRightNav.classList.remove("active-nav-button");
-            currRightNav = document.getElementsByClassName("right-nav-button")[0];
-            currRightNav.classList.add("active-nav-button");
-        }
-        else { caliberateSectionOnScroll(); }
-    } else {
-        if (currElement == sec1) {
-            window.scrollTo({
-                top: sec2.offsetTop,
-                behavior: "smooth"
-            });
-            currElement = sec2;
-            currRightNav.classList.remove("active-nav-button");
-            currRightNav = document.getElementsByClassName("right-nav-button")[1];
-            currRightNav.classList.add("active-nav-button");
-        }
-        else {
-            caliberateSectionOnScroll();
-        }
-    }
-});
+// window.addEventListener("wheel", function (event) {
+//     if (event.wheelDelta > 0 || event.detail < 0) {
+//         if (currElement == sec2) {
+//             window.scrollTo({
+//                 top: sec1.offsetTop,
+//                 behavior: "smooth"
+//             });
+//             currElement = sec1;
+//             currRightNav.classList.remove("active-nav-button");
+//             currRightNav = document.getElementsByClassName("right-nav-button")[0];
+//             currRightNav.classList.add("active-nav-button");
+//         }
+//         else { caliberateSectionOnScroll(); }
+//     } else {
+//         if (currElement == sec1) {
+//             window.scrollTo({
+//                 top: sec2.offsetTop,
+//                 behavior: "smooth"
+//             });
+//             currElement = sec2;
+//             currRightNav.classList.remove("active-nav-button");
+//             currRightNav = document.getElementsByClassName("right-nav-button")[1];
+//             currRightNav.classList.add("active-nav-button");
+//         }
+//         else {
+//             caliberateSectionOnScroll();
+//         }
+//     }
+// });
 
 window.addEventListener("scroll", function() {
         caliberateSectionOnScroll();
